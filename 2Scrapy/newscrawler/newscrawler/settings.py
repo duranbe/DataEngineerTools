@@ -68,6 +68,11 @@ ROBOTSTXT_OBEY = True
 #    'newscrawler.pipelines.NewscrawlerPipeline': 300,
 #}
 
+ITEM_PIPELINES = {
+    'newscrawler.pipelines.TextPipeline': 100,
+    'newscrawler.pipelines.MongoPipeline': 300
+}
+
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
